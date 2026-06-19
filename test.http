@@ -1,0 +1,23 @@
+POST http://localhost:3000/creator-cards
+Content-Type: application/json
+
+{
+  "title": "My Creator Card",
+  "description": "Example card",
+  "creator_reference": "user123",
+  "status": "published",
+  "access_type": "public"
+}
+### GET card by slug
+GET http://localhost:3000/creator-cards/my-creator-card
+
+### GET all cards
+GET http://localhost:3000/creator-cards
+
+### DELETE card
+DELETE http://localhost:3000/creator-cards/my-creator-card
+Content-Type: application/json
+
+{
+  "creator_reference": "user123"
+}
